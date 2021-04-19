@@ -1,10 +1,10 @@
 # O desafio do Mozão
 *TL/DR:* Desafio em ReactJS para que as pessoas iniciantes de front-end possam desenvolver uma aplicação que vai testar seus conhecimentos e te proporcionar um feedback construtivo para crescer na stack.
 
-*Autor: Diogo Fonseca, aka “Mozão”
-Público: iniciantes, aprendizes e juniores em front-end com ReactJS
-Criado em: Janeiro/2021
-Última revisão: Abril/2021*
+*Autor: Diogo Fonseca, aka “Mozão”  
+Público: iniciantes, aprendizes e juniores em front-end com ReactJS  
+Criado em: Janeiro/2021  
+Última revisão: Abril/2021* 
 
 
 ## Objetivo do desafio
@@ -15,11 +15,11 @@ Clonar o repositório em sua máquina local e criar um branch novo para o seu c�
 
 
 ## Histórias
-•	Ao entrar na home page, devo pesquisar o usuário pelo seu username do GitHub e ter os dados do usuário exibidos corretamente na página de perfil
-•	Na página de perfil, os repositórios devem ser ordenados com o seguinte critério: dos que tem mais estrelas, para os que tem menos estrelas
-•	Os nomes dos repositórios devem ser links que levam ao repositório original do GitHub, em uma página nova
-•	Caso o usuário pesquisado possua um site nas informações de seu perfil, o mesmo deve ser aberto em uma nova página. O mesmo deve acontecer caso o usuário pesquisado tenha uma conta no twitter em seu perfil.
-•	O botão de voltar deve levar de volta para a home page, para que outro usuário do GitHub seja pesquisado
+•	Ao entrar na home page, devo pesquisar o usuário pelo seu username do GitHub e ter os dados do usuário exibidos corretamente na página de perfil.  
+•	Na página de perfil, os repositórios devem ser ordenados com o seguinte critério: dos que tem mais estrelas, para os que tem menos estrelas.  
+•	Os nomes dos repositórios devem ser links que levam ao repositório original do GitHub, em uma página nova.  
+•	Caso o usuário pesquisado possua um site nas informações de seu perfil, o mesmo deve ser aberto em uma nova página. O mesmo deve acontecer caso o usuário pesquisado tenha uma conta no twitter em seu perfil.  
+•	O botão de voltar deve levar de volta para a home page, para que outro usuário do GitHub seja pesquisado.  
 
 
 ## Referências
@@ -63,27 +63,23 @@ Clonar o repositório em sua máquina local e criar um branch novo para o seu c�
 
 •	Deve ser seguido o layout disponibilizado. Caso queira, pode utilizar uma lib de ícones com ícones semelhantes e relevantes pro contexto da aplicação.
 
+•	É imprescindível que o teste desenvolvido funcione corretamente na minha máquina (em qualquer máquina, na real). Inclusive, recomendo que comece codando pela regra de negócio e, depois de finalizado a regra, trabalhe corretamente os components, qualidade de código e layout.
+
 
 ## Entrega do desafio
-Subir o código no seu github pessoal, abrir um Merge Request no repositório do teste, com o código que foi desenvolvido por você. A partir deste 
-
-
-# Qual o objetivo do teste?
-O objetivo é entender como você domina os conceitos básicos de React. Estou interessado em ver como você faz componentes, abstração de código, legibilidade de código e o quão próximo o seu código se aproxima do design de tela.
-
-É imprescindível que o teste desenvolvido funcione corretamente na minha máquina (em qualquer máquina, na real). Inclusive, recomendo que comece fazendo a regra de negócio e, depois de finalizado a regra, trabalhe corretamente os components, qualidade de código e layout.
+Subir o código no seu github pessoal no branch novo que foi criado. A partir deste branch, abrir um Merge Request deste para o branch main/master com o código que foi desenvolvido. Nisso, me adicione no projeto (@devMozao) e coloque como revisor do Merge Request. Não faça o merge até ter o meu feedback.
 
 ## Observações importantes
-A ideia deste teste é que ele sirva para ilustrar um desafio no mundo real, da forma mais “sincera” possível e, a partir dele, que vc consiga exibir o seu desenvolvimento como profissional front-end, utilizando ReactJS. Entender como você traz este conhecimento pra debate com outros profissionais e como você o apresenta como solução técnica que traz valor para um cliente/usuário final num ambiente de trabalho. 
+A ideia deste desafio é entender como você domina os conceitos básicos de React, com um desafio no mundo real, da forma mais “sincera” possível. E, a partir dele, entender como você traz este conhecimento pra debate com outros profissionais e como você o apresenta como solução técnica que traz valor para um cliente/usuário final num ambiente de trabalho. 
 
-Não é pra ser um teste exaustivo. Esse não é esse o objetivo. Tanto que no teste eu não peço soluções de formulário ou um CRUD completo com gerenciamento de estados complexos. A regra principal *- e o que mais importa -* é que o teste que você desenvolveu e apresentou, funcione e atenda ao que foi solicitado na história acima. 
+Não é pra ser um teste exaustivo - este não é esse o objetivo. Tanto que no teste eu não peço soluções de formulário com CRUD completo e gerenciamento de estados complexos. A regra principal *- e o que mais importa -* é que o teste que você desenvolveu e apresentou, funcione e atenda ao que foi solicitado na história acima. 
 
 Além do que foi pedido nos requisitos técnicos acima, não existe “certo e errado”, da mesma forma que não vou levar tudo ao pé da letra nos mínimos detalhes.
 
 **Além disso, um outro ponto importante deste teste é o de entender como que estão seus conhecimentos e, a partir daí, poder te auxiliar da melhor forma possível com dicas e experiências que possam ser relevantes pra alavancar a sua carreira como desenvolvedor front-end.**
 
 ## Considerações finais 
-O que sempre se espera de um profissional front-end é que ele entenda uma tarefa, a regra de negócio solicitada, seus requisitos técnicos e a apresentação de tela que é esperado para a tarefa. Este são os requisitos mínimos para um profissionai de nível Júnior. Os demais pontos, você deve ser mentorado dentro da empresa e crescer junto dos demais profissionais. *(no cenário ideal de trabalho)*. Acredito que este teste atende bem estes requisitos.
+O que sempre se espera de um profissional front-end, é que ele entenda uma tarefa, a regra de negócio solicitada, seus requisitos técnicos e a apresentação de tela que é esperado para a tarefa. Este são os requisitos mínimos para um profissionai de nível Júnior. Os demais pontos, você deve ser mentorado dentro da empresa e crescer junto dos demais profissionais. *(no cenário ideal de trabalho)*. Acredito que este teste atenda bem estes requisitos.
 
 Para profissionais de nível Pleno e Senior *- caso queira fazer o teste -* espero que você vá além do mínimo proposto e demostre o conhecimento que tem. O teste tem gaps propositais para você sugerir soluções, desenvolver ideias e provar na prática o porque a sua decisão pode ter um impacto positivo nessa tarefa.
 

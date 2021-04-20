@@ -1,15 +1,42 @@
 import styled from "styled-components";
 
-export const HomeArea = styled.section`
+export const GeneralHome = styled.section`
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
+`;
+export const ThemeSwitcherContainer = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  justify-content: flex-end;
+`;
+export const ThemeSwitcher = styled.button`
+  margin: 0px 40px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  :active {
+    position: relative;
+    top: -0.5px;
+  }
+`;
+export const ThemeIcon = styled.img`
+  width: 40px;
+  height: 40px;
+`;
+export const HomeArea = styled.section`
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
+
 export const HomeContainer = styled.div`
   width: 520px;
   height: 100px;
+  position: relative;
 `;
 export const TitleContainer = styled.div`
   width: 520px;

@@ -1,12 +1,24 @@
 import GlobalStyle from "./style/global";
 import { ThemeProvider } from "styled-components";
 import light from "./style/themes/light";
+import dark from "./style/themes/dark";
 import HomePage from "./components/HomePage/index";
+import { useState } from "react";
 function App() {
+  const [preferenceTheme, SetPreferenceTheme] = useState(light);
+  const TougleTheme = () => {
+    console.log("mudei");
+    preferenceTheme === light
+      ? SetPreferenceTheme(dark)
+      : SetPreferenceTheme(light);
+  };
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={preferenceTheme}>
       <GlobalStyle />
-      <HomePage />
+      <HomePage
+        TougleTheme={() => TougleTheme()}
+        preferenceTheme={preferenceTheme}
+      />
     </ThemeProvider>
   );
 }

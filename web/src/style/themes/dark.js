@@ -1,13 +1,13 @@
 export default {
-  title: "light",
+  title: "dark",
 
   colors: {
-    primary: "#47525E",
-    secondary: "#3B4252",
-    text: "#ECEFF4",
-    subtext: "#8190A5",
+    primary: "#ECEFF4",
+    secondary: "#ECEFF4",
+    text: "#2E3440",
+    subtext: "#47525E",
 
-    background: "#FAFAFA",
+    background: "#2E3440",
     inputbackground: "#FAFAFA",
   },
   breakpoints: {

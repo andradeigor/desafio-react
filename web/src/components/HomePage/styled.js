@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const MainContainer = styled.section`
+  width: 100vw;
+  height: 100vh;
+`;
+
 export const GeneralHome = styled.section`
   width: 100vw;
   height: 80vh;
@@ -61,7 +66,8 @@ export const Seach = styled.input`
   width: 400px;
   height: 100%;
   border-radius: 5px;
-  border: 1px solid ${(props) => props.theme.colors.secondary};
+  border: 2px solid
+    ${(props) => (props.Error ? "#F44336" : props.theme.colors.secondary)};
   padding-left: 10px;
   font-size: 18px;
   font-family: "Lato", sans-serif;

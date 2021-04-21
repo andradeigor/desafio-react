@@ -3,9 +3,9 @@ import { ThemeProvider } from "styled-components";
 import light from "./style/themes/light";
 import dark from "./style/themes/dark";
 import HomePage from "./components/HomePage/index";
-import { useState } from "react";
+import MySetState from "./utils/MyUseState";
 function App() {
-  const [preferenceTheme, SetPreferenceTheme] = useState(light);
+  const [preferenceTheme, SetPreferenceTheme] = MySetState("theme", light);
   const TougleTheme = () => {
     console.log("mudei");
     preferenceTheme === light

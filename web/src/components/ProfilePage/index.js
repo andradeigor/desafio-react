@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { GridContainer } from "./styled";
 import LateralBar from "./LateralBar/index";
 import Repositories from "./Repositories/index";
+
 const ProfilePage = () => {
   return (
     <GridContainer>

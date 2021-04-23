@@ -83,7 +83,7 @@ export const ProfileInfoContact = styled.div`
 `;
 export const ProfileInfoContatText = styled.span`
   color: ${(props) => props.theme.colors.text};
-  font-size: 28px;
+  font-size: 22px;
   font-style: italic;
   font-weight: 300;
   line-height: 34px;

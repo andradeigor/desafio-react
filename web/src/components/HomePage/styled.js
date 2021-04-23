@@ -101,6 +101,7 @@ export const SearchIcon = styled.img`
   width: 25px;
   height: 25px;
   margin-right: 5px;
+  pointer-events: none;
 `;
 export const ButtonText = styled.span`
   font-family: "Lato", sans-serif;

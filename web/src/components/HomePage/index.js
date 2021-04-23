@@ -34,7 +34,7 @@ const HomePage = ({ TougleTheme, preferenceTheme }) => {
     setIsOpen(!isOpen);
   };
   const handleClick = async () => {
-    if (searchBox === "") {
+    if (searchBox.length < 3) {
       return setError(true);
     }
     const data = await request(
@@ -81,6 +81,7 @@ const HomePage = ({ TougleTheme, preferenceTheme }) => {
                         ? SearchIconLightPath
                         : SearchIconDarkPath
                     }
+                    dragabble={false}
                   />
                   <ButtonText>Buscar</ButtonText>
                 </ButtonContent>

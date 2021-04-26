@@ -3,6 +3,7 @@ import {
   CardContainer,
   CardTitleContainer,
   CardTitle,
+  CardTitleLink,
   CardDescriptionContainer,
   CardDescription,
   RepositoriesDivider,
@@ -16,10 +17,18 @@ const RepositoriesCard = ({ repo }) => {
     <CardArea>
       <CardContainer>
         <CardTitleContainer>
-          <CardTitle>{repo.title}</CardTitle>
+          <CardTitle>
+            <CardTitleLink href={repo.titlelink} target="_blank">
+              {repo.title}
+            </CardTitleLink>
+          </CardTitle>
         </CardTitleContainer>
         <CardDescriptionContainer>
-          <CardDescription>{repo.description}</CardDescription>
+          <CardDescription>
+            {repo.description
+              ? repo.description
+              : "Repositorie with no description"}
+          </CardDescription>
         </CardDescriptionContainer>
         <CardStatsArea>
           <MySvg

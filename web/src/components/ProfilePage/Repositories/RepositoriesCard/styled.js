@@ -14,13 +14,17 @@ export const CardContainer = styled.div`
 export const CardTitleContainer = styled.div``;
 
 export const CardTitle = styled.h1`
-  color: ${(props) => props.theme.colors.secondary};
   font-size: 24px;
   line-height: 34px;
-  width: 400px;
   font-weight: 300;
   text-align: left;
-  font-style: italic;
+`;
+export const CardTitleLink = styled.a`
+  color: ${(props) => props.theme.colors.secondary};
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const CardDescriptionContainer = styled.div``;

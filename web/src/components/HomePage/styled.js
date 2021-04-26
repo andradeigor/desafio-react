@@ -4,14 +4,14 @@ export const MainContainer = styled.section`
   width: 100vw;
   height: 100vh;
 `;
-
 export const GeneralHome = styled.section`
-  width: 100vw;
-  height: 80vh;
+  width: 100%;
+  height: 80%;
 `;
+
 export const ThemeSwitcherContainer = styled.div`
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 80px;
   justify-content: flex-end;
 `;
@@ -30,7 +30,7 @@ export const ThemeIcon = styled.img`
   width: 40px;
   height: 40px;
 `;
-export const HomeArea = styled.section`
+export const HomeArea = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -41,11 +41,18 @@ export const HomeArea = styled.section`
 export const HomeContainer = styled.div`
   width: 520px;
   height: 100px;
-  position: relative;
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    height: 200px;
+    width: 100%;
+  }
 `;
 export const TitleContainer = styled.div`
   width: 520px;
   height: 50%;
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    width: 100%;
+    height: 25%;
+  }
 `;
 export const Title = styled.h1`
   font-size: 40px;
@@ -53,12 +60,22 @@ export const Title = styled.h1`
   font-style: italic;
   color: ${(props) => props.theme.colors.secondary};
   text-align: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    font-size: 32px;
+  }
 `;
 
 export const SearchContainer = styled.div`
   width: 600px;
   height: 50%;
   display: flex;
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const Seach = styled.input`
@@ -78,6 +95,13 @@ export const Seach = styled.input`
   ::placeholder {
     color: ${(props) => props.theme.colors.subtext};
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    width: 90%;
+    height: 50px;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    font-size: 16px;
+  }
 `;
 export const Button = styled.button`
   width: 120px;
@@ -90,6 +114,11 @@ export const Button = styled.button`
   :active {
     position: relative;
     top: -0.5px;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    margin-top: 25px;
+    height: 50px;
+    width: 80%;
   }
 `;
 export const ButtonContent = styled.div`

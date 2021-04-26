@@ -7,6 +7,7 @@ export const ProfileInfoContainer = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+
 export const ProfilePicture = styled.img`
   background-color: white;
   width: 300px;
@@ -90,6 +91,13 @@ export const ProfileInfoContatText = styled.span`
   width: 300px;
   text-align: left;
   margin-left: 15px;
+`;
+export const ProfileLink = styled.a`
+  color: ${(props) => props.theme.colors.text};
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const ProfileBackButton = styled.button`

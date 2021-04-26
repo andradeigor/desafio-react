@@ -24,7 +24,9 @@ function App() {
             preferenceTheme={preferenceTheme}
           />
         </Route>
-        <Route path="profile/" children={ProfilePage}></Route>
+        <Route path="/profile/:id">
+          <ProfilePage />
+        </Route>
       </Router>
     </ThemeProvider>
   );

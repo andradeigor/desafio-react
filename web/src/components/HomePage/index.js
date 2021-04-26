@@ -18,12 +18,14 @@ import {
 import ModalError from "../ModalError/index";
 import SearchIconLightPath from "../../assets/SearchIconLight.svg";
 import SearchIconDarkPath from "../../assets/SearchIconDark.svg";
+import { useHistory } from "react-router-dom";
 import MoonIconPath from "../../assets/MoonIcon.svg";
 import SunIconPath from "../../assets/SunIcon.svg";
 import { useState } from "react";
 import request from "../../utils/request";
 
 const HomePage = ({ TougleTheme, preferenceTheme }) => {
+  const history = useHistory();
   const [searchBox, setSearchBox] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [Error, setError] = useState(false);
@@ -37,16 +39,20 @@ const HomePage = ({ TougleTheme, preferenceTheme }) => {
     if (searchBox.length < 3) {
       return setError(true);
     }
-    const data = await request(
-      `https://api.github.com/users/${searchBox}`,
-      "get"
-    ).catch((err) => {
-      if (err.response) {
-        setError(true);
-        handleModal();
-        return;
-      }
-    });
+    await request(`https://api.github.com/users/${searchBox}`, "get")
+      .then((res) =>
+        history.push({
+          pathname: `/profile/${res.data.login}`,
+          state: { data: res.data },
+        })
+      )
+      .catch((err) => {
+        if (err.response) {
+          setError(true);
+          handleModal();
+          return;
+        }
+      });
   };
 
   return (
@@ -83,7 +89,7 @@ const HomePage = ({ TougleTheme, preferenceTheme }) => {
                     }
                     dragabble={false}
                   />
-                  <ButtonText>Buscar</ButtonText>
+                  <ButtonText type="submit">Buscar</ButtonText>
                 </ButtonContent>
               </Button>
             </SearchContainer>

@@ -13,54 +13,26 @@ import {
   ProfileInfoContatText,
   ProfileBackButton,
   ProfileBackButtonText,
+  ProfileLink,
 } from "./styled";
 import MySvg from "../../../utils/MySvg";
 import { useState } from "react";
-const LateralBar = () => {
-  const [profile, setProfile] = useState({
-    login: "devMozao",
-    id: 15485768,
-    node_id: "MDQ6VXNlcjE1NDg1NzY4",
-    avatar_url: "https://avatars.githubusercontent.com/u/15485768?v=4",
-    gravatar_id: "",
-    url: "https://api.github.com/users/devMozao",
-    html_url: "https://github.com/devMozao",
-    followers_url: "https://api.github.com/users/devMozao/followers",
-    following_url:
-      "https://api.github.com/users/devMozao/following{/other_user}",
-    gists_url: "https://api.github.com/users/devMozao/gists{/gist_id}",
-    starred_url: "https://api.github.com/users/devMozao/starred{/owner}{/repo}",
-    subscriptions_url: "https://api.github.com/users/devMozao/subscriptions",
-    organizations_url: "https://api.github.com/users/devMozao/orgs",
-    repos_url: "https://api.github.com/users/devMozao/repos",
-    events_url: "https://api.github.com/users/devMozao/events{/privacy}",
-    received_events_url:
-      "https://api.github.com/users/devMozao/received_events",
-    type: "User",
-    site_admin: false,
-    name: "Diogo Fonseca",
-    company: "ClickBus",
-    blog: "https://www.linkedin.com/in/devmozao/",
-    location: "Osasco/SP",
-    email: null,
-    hireable: true,
-    bio:
-      "💜 Dev, PC builder and Streamer 💚\r\n🚀 twitch.tv/devmozao 🔥\r\n☠️ INTJ & Chaotic Neutral 🎲\r\n👾 Human after all 👽",
-    twitter_username: "devmozao",
-    public_repos: 20,
-    public_gists: 1,
-    followers: 350,
-    following: 69,
-    created_at: "2015-10-30T23:28:48Z",
-    updated_at: "2021-04-21T18:27:08Z",
-  });
+const LateralBar = ({ profileData }) => {
+  const [profile, setProfile] = useState(profileData);
+
   return (
     <ProfileInfoContainer>
       <ProfilePicture src={profile.avatar_url} />
       <ProfileInfoName>{profile.name}</ProfileInfoName>
       <ProfileInfoUsername>@{profile.login}</ProfileInfoUsername>
       <ProfileInfoDescription>
-        <ProfileInfoDescriptionText>{profile.bio}</ProfileInfoDescriptionText>
+        {profile.bio ? (
+          <ProfileInfoDescriptionText>{profile.bio}</ProfileInfoDescriptionText>
+        ) : (
+          <ProfileInfoDescriptionText>
+            "User has no Bio"
+          </ProfileInfoDescriptionText>
+        )}
       </ProfileInfoDescription>
       <ProfileInfoStatsContainer>
         <ProfileInfoStatsItem>
@@ -167,7 +139,11 @@ const LateralBar = () => {
               heigh={35}
               color="#ECEFF4"
             />
-            <ProfileInfoContatText>{profile.blog}</ProfileInfoContatText>
+            <ProfileInfoContatText>
+              <ProfileLink href={profile.blog} target="_blank">
+                {profile.blog}
+              </ProfileLink>
+            </ProfileInfoContatText>
           </ProfileInfoContact>
         ) : null}
         {profile.twitter_username ? (
@@ -182,7 +158,12 @@ const LateralBar = () => {
               color="#ECEFF4"
             />
             <ProfileInfoContatText>
-              @{profile.twitter_username}
+              <ProfileLink
+                href={`https://twitter.com/${profile.twitter_username}`}
+                target="_blank"
+              >
+                @{profile.twitter_username}
+              </ProfileLink>
             </ProfileInfoContatText>
           </ProfileInfoContact>
         ) : null}

@@ -1,18 +1,14 @@
 import { GridContainer } from "./styled";
 import LateralBar from "./LateralBar/index";
 import Repositories from "./Repositories/index";
-import { useLocation, useHistory } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const ProfilePage = () => {
-  const history = useHistory();
-  const location = useLocation();
-  const [profileData, setProfileData] = useState(location.state.data);
-
+  const id = useParams();
   return (
     <GridContainer>
-      <LateralBar profileData={profileData} />
-      <Repositories profileData={profileData} />
+      <LateralBar id={id.id} />
+      <Repositories id={id.id} />
     </GridContainer>
   );
 };

@@ -5,4 +5,7 @@ export const GridContainer = styled.section`
   height: 100vh;
   display: grid;
   grid-template-columns: 450px 1fr;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    grid-template-columns: 350px 1fr;
+  }
 `;

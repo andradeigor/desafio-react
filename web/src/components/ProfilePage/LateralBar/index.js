@@ -8,6 +8,7 @@ import {
   ProfileInfoStatsContainer,
   ProfileInfoStatsItem,
   ProfileInfoStatsText,
+  ProfileInfoStatsNumber,
   ProfileInfoContatsContainer,
   ProfileInfoContact,
   ProfileInfoContatText,
@@ -16,10 +17,18 @@ import {
   ProfileLink,
 } from "./styled";
 import MySvg from "../../../utils/MySvg";
-import { useState } from "react";
-const LateralBar = ({ profileData }) => {
-  const [profile, setProfile] = useState(profileData);
+import { useEffect, useState } from "react";
+import request from "../../../utils/request";
+import { useHistory } from "react-router-dom";
+const LateralBar = ({ id }) => {
+  const history = useHistory();
+  const [profile, setProfile] = useState({});
 
+  useEffect(async () => {
+    await request(`https://api.github.com/users/${id}`, "get")
+      .then((res) => setProfile(res.data))
+      .catch((err) => history.push({ pathname: "/" }));
+  }, []);
   return (
     <ProfileInfoContainer>
       <ProfilePicture src={profile.avatar_url} />
@@ -47,9 +56,8 @@ const LateralBar = ({ profileData }) => {
             heigh={20}
             color="#ECEFF4"
           />
-          <ProfileInfoStatsText>
-            {profile.followers} Followers
-          </ProfileInfoStatsText>
+          <ProfileInfoStatsNumber>{profile.followers}</ProfileInfoStatsNumber>
+          <ProfileInfoStatsText>Followers</ProfileInfoStatsText>
         </ProfileInfoStatsItem>
         <ProfileInfoStatsItem>
           <MySvg
@@ -61,9 +69,8 @@ const LateralBar = ({ profileData }) => {
             color="#ECEFF4"
             viewBox="0 0 30 30"
           />
-          <ProfileInfoStatsText>
-            {profile.following} Following
-          </ProfileInfoStatsText>
+          <ProfileInfoStatsNumber>{profile.following}</ProfileInfoStatsNumber>
+          <ProfileInfoStatsText> Following</ProfileInfoStatsText>
         </ProfileInfoStatsItem>
         <ProfileInfoStatsItem>
           <MySvg
@@ -75,7 +82,8 @@ const LateralBar = ({ profileData }) => {
             heigh={30}
             color="#ECEFF4"
           />
-          <ProfileInfoStatsText>100 Stars</ProfileInfoStatsText>
+          <ProfileInfoStatsNumber>100</ProfileInfoStatsNumber>
+          <ProfileInfoStatsText>Stars</ProfileInfoStatsText>
         </ProfileInfoStatsItem>
       </ProfileInfoStatsContainer>
       <ProfileInfoContatsContainer>
@@ -169,7 +177,9 @@ const LateralBar = ({ profileData }) => {
         ) : null}
       </ProfileInfoContatsContainer>
       <ProfileBackButton>
-        <ProfileBackButtonText>Voltar</ProfileBackButtonText>
+        <ProfileBackButtonText onClick={() => history.push({ pathname: "/" })}>
+          Voltar
+        </ProfileBackButtonText>
       </ProfileBackButton>
     </ProfileInfoContainer>
   );

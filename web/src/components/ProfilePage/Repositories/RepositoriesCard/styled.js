@@ -4,12 +4,14 @@ export const CardArea = styled.div`
   margin-bottom: 5px;
 `;
 export const CardContainer = styled.div`
-  width: 100%;
   height: 100%;
   padding-left: 70px;
   margin-top: 15px;
   display: flex;
   flex-direction: column;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    padding-left: 25px;
+  }
 `;
 export const CardTitleContainer = styled.div``;
 
@@ -34,6 +36,12 @@ export const CardDescription = styled.h2`
   line-height: 28px;
   font-weight: 300;
   text-align: left;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    max-width: 25ch;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 `;
 export const CardStatsArea = styled.div`
   height: 30px;
@@ -61,7 +69,6 @@ export const CardStatsDot = styled.span`
   margin-right: 10px;
 `;
 export const RepositoriesDivider = styled.div`
-  width: 100%;
   height: 2px;
   border: 1px solid ${(props) => props.theme.colors.text};
 `;

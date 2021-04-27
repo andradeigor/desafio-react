@@ -14,6 +14,10 @@ export const ProfilePicture = styled.img`
   height: 300px;
   margin-top: 60px;
   border-radius: 15px;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    width: 250px;
+    height: 250px;
+  }
 `;
 export const ProfileInfoName = styled.h1`
   font-size: 40px;
@@ -24,6 +28,9 @@ export const ProfileInfoName = styled.h1`
   width: 400px;
   text-align: left;
   color: ${(props) => props.theme.colors.text};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    width: 300px;
+  }
 `;
 export const ProfileInfoUsername = styled.h2`
   font-size: 28px;
@@ -33,18 +40,24 @@ export const ProfileInfoUsername = styled.h2`
   font-weight: 300;
   width: 400px;
   text-align: left;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    width: 300px;
+  }
 `;
 
 export const ProfileInfoDescription = styled.div`
   width: 400px;
   margin-top: 30px;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    width: 300px;
+  }
 `;
 export const ProfileInfoDescriptionText = styled.span`
   color: ${(props) => props.theme.colors.subtext};
   font-family: Lato;
   font-size: 18px;
   line-height: 28px;
-  text-align: left;
+  text-align: justify;
 `;
 
 export const ProfileInfoStatsContainer = styled.div`
@@ -52,6 +65,9 @@ export const ProfileInfoStatsContainer = styled.div`
   height: 30px;
   display: flex;
   align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    width: 300px;
+  }
 `;
 export const ProfileInfoStatsItem = styled.div`
   margin-top: 15px;
@@ -64,16 +80,34 @@ export const ProfileInfoStatsText = styled.span`
   font-size: 18px;
   font-style: italic;
   line-height: 26px;
-  width: 110px;
   font-weight: 300;
   text-align: left;
   margin-top: 3px;
   margin-left: 5px;
+  margin-right: 5px;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    display: none;
+  }
+`;
+export const ProfileInfoStatsNumber = styled.span`
+  color: ${(props) => props.theme.colors.text};
+  font-size: 18px;
+  font-style: italic;
+  line-height: 26px;
+  font-weight: 300;
+  text-align: left;
+  margin-top: 3px;
+  margin-left: 5px;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin-right: 10px;
+  }
 `;
 export const ProfileInfoContatsContainer = styled.article`
   width: 400px;
-
   margin-top: 30px;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    width: 300px;
+  }
 `;
 export const ProfileInfoContact = styled.div`
   width: 400px;
@@ -81,16 +115,22 @@ export const ProfileInfoContact = styled.div`
   margin-bottom: 5px;
   display: flex;
   margin-top: 15px;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    width: 300px;
+  }
 `;
 export const ProfileInfoContatText = styled.span`
   color: ${(props) => props.theme.colors.text};
-  font-size: 22px;
+  font-size: 18px;
   font-style: italic;
   font-weight: 300;
   line-height: 34px;
   width: 300px;
   text-align: left;
   margin-left: 15px;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    font-size: 16px;
+  }
 `;
 export const ProfileLink = styled.a`
   color: ${(props) => props.theme.colors.text};
@@ -112,6 +152,7 @@ export const ProfileBackButton = styled.button`
   outline: none;
   cursor: pointer;
   border: none;
+  margin-bottom: 25px;
 `;
 export const ProfileBackButtonText = styled.span`
   color: ${(props) => props.theme.colors.secondary};

@@ -8,8 +8,8 @@ import SortRepos from "../../../utils/SortRepos";
 const Repositories = ({ id }) => {
   const history = useHistory();
   const [repotoriesData, SetRepotoriesData] = useState([]);
-  useEffect(async () => {
-    await request(`https://api.github.com/users/${id}/repos`, "get")
+  useEffect(() => {
+    request(`https://api.github.com/users/${id}/repos`, "get")
       .then((data) => SortRepos(data.data))
       .then((sortedData) => SetRepotoriesData(sortedData))
       .catch((err) => history.push({ pathname: "/" }));

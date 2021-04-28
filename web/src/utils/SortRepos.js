@@ -1,7 +1,7 @@
 const getInicialData = (rawdata) => {
   const data = rawdata;
   let newdata = [];
-  data.map((dat) => {
+  data.forEach((dat) => {
     const temp = {
       id: dat.id,
       title: dat.name,

@@ -34,6 +34,7 @@ export const CardDescriptionContainer = styled.div``;
 export const CardDescription = styled.h2`
   font-size: 18px;
   line-height: 28px;
+  color: ${(props) => props.theme.colors.secondary};
   font-weight: 300;
   text-align: left;
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
@@ -52,7 +53,7 @@ export const CardStatsArea = styled.div`
 `;
 
 export const CardStatsItem = styled.span`
-  color: ${(props) => props.theme.colors.subtext};
+  color: ${(props) => props.theme.colors.secondary};
   font-size: 18px;
   font-style: italic;
   line-height: 26px;
@@ -70,5 +71,6 @@ export const CardStatsDot = styled.span`
 `;
 export const RepositoriesDivider = styled.div`
   height: 2px;
-  border: 1px solid ${(props) => props.theme.colors.text};
+  border: 1px solid ${(props) => props.theme.colors.divider};
+  width: 98%;
 `;

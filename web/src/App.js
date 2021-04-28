@@ -25,7 +25,10 @@ function App() {
           />
         </Route>
         <Route path="/profile/:id">
-          <ProfilePage />
+          <ProfilePage
+            TougleTheme={() => TougleTheme()}
+            preferenceTheme={preferenceTheme}
+          />
         </Route>
       </Router>
     </ThemeProvider>

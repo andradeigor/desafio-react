@@ -1,5 +1,26 @@
 import styled from "styled-components";
 
+export const ThemeSwitcherContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: flex-end;
+`;
+export const ThemeSwitcher = styled.button`
+  margin: 0px 30px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  :active {
+    position: relative;
+    top: -0.5px;
+  }
+`;
+export const ThemeIcon = styled.img`
+  width: 40px;
+  height: 40px;
+`;
 export const ProfileInfoContainer = styled.div`
   display: flex;
   background-color: ${(props) => props.theme.colors.secondary};
@@ -12,7 +33,6 @@ export const ProfilePicture = styled.img`
   background-color: white;
   width: 300px;
   height: 300px;
-  margin-top: 60px;
   border-radius: 15px;
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
     width: 250px;
@@ -147,7 +167,7 @@ export const ProfileBackButton = styled.button`
   margin-top: 20px;
   width: 190px;
   height: 50px;
-  color: ${(props) => props.theme.colors.text};
+  background-color: ${(props) => props.theme.colors.text};
   border-radius: 5px;
   outline: none;
   cursor: pointer;

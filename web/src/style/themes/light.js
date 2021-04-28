@@ -6,7 +6,7 @@ export default {
     secondary: "#3B4252",
     text: "#ECEFF4",
     subtext: "#8190A5",
-
+    divider: "#ECEFF4",
     background: "#FAFAFA",
     inputbackground: "#FAFAFA",
   },

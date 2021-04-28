@@ -7,8 +7,8 @@ const MySvg = ({ Mypaths, width, height, viewBox, color }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {Mypaths.map((Mypath) => {
-        return <path d={Mypath} fill={color} />;
+      {Mypaths.map((Mypath, index) => {
+        return <path d={Mypath} fill={color} key={index} />;
       })}
     </svg>
   );

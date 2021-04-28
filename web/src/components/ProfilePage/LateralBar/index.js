@@ -1,5 +1,8 @@
 import {
   ProfileInfoContainer,
+  ThemeSwitcherContainer,
+  ThemeSwitcher,
+  ThemeIcon,
   ProfilePicture,
   ProfileInfoName,
   ProfileInfoUsername,
@@ -20,17 +23,26 @@ import MySvg from "../../../utils/MySvg";
 import { useEffect, useState } from "react";
 import request from "../../../utils/request";
 import { useHistory } from "react-router-dom";
-const LateralBar = ({ id }) => {
+import MoonIconPath from "../../../assets/MoonIcon2.svg";
+import SunIconPath from "../../../assets/SunIcon2.svg";
+const LateralBar = ({ id, preferenceTheme, TougleTheme }) => {
   const history = useHistory();
   const [profile, setProfile] = useState({});
-
-  useEffect(async () => {
-    await request(`https://api.github.com/users/${id}`, "get")
+  const themeColor = preferenceTheme.title === "light" ? "#ECEFF4" : "#47525E";
+  useEffect(() => {
+    request(`https://api.github.com/users/${id}`, "get")
       .then((res) => setProfile(res.data))
       .catch((err) => history.push({ pathname: "/" }));
   }, []);
   return (
     <ProfileInfoContainer>
+      <ThemeSwitcherContainer>
+        <ThemeSwitcher onClick={TougleTheme}>
+          <ThemeIcon
+            src={preferenceTheme.title === "light" ? MoonIconPath : SunIconPath}
+          />
+        </ThemeSwitcher>
+      </ThemeSwitcherContainer>
       <ProfilePicture src={profile.avatar_url} />
       <ProfileInfoName>{profile.name}</ProfileInfoName>
       <ProfileInfoUsername>@{profile.login}</ProfileInfoUsername>
@@ -54,7 +66,7 @@ const LateralBar = ({ id }) => {
             width={30}
             viewBox="0 0 296 189"
             heigh={20}
-            color="#ECEFF4"
+            color={themeColor}
           />
           <ProfileInfoStatsNumber>{profile.followers}</ProfileInfoStatsNumber>
           <ProfileInfoStatsText>Followers</ProfileInfoStatsText>
@@ -66,7 +78,7 @@ const LateralBar = ({ id }) => {
             ]}
             width={30}
             height={30}
-            color="#ECEFF4"
+            color={themeColor}
             viewBox="0 0 30 30"
           />
           <ProfileInfoStatsNumber>{profile.following}</ProfileInfoStatsNumber>
@@ -80,7 +92,7 @@ const LateralBar = ({ id }) => {
             width={30}
             viewBox="0 0 30 30"
             heigh={30}
-            color="#ECEFF4"
+            color={themeColor}
           />
           <ProfileInfoStatsNumber>100</ProfileInfoStatsNumber>
           <ProfileInfoStatsText>Stars</ProfileInfoStatsText>
@@ -100,7 +112,7 @@ const LateralBar = ({ id }) => {
               width={35}
               viewBox="0 0 35 35"
               heigh={35}
-              color="#ECEFF4"
+              color={themeColor}
             />
             <ProfileInfoContatText>{profile.company}</ProfileInfoContatText>
           </ProfileInfoContact>
@@ -115,7 +127,7 @@ const LateralBar = ({ id }) => {
               width={35}
               viewBox="0 0 35 35"
               heigh={35}
-              color="#ECEFF4"
+              color={themeColor}
             />
             <ProfileInfoContatText>{profile.location}</ProfileInfoContatText>
           </ProfileInfoContact>
@@ -129,7 +141,7 @@ const LateralBar = ({ id }) => {
               width={35}
               viewBox="0 0 35 35"
               heigh={35}
-              color="#ECEFF4"
+              color={themeColor}
             />
             <ProfileInfoContatText>{profile.email}</ProfileInfoContatText>
           </ProfileInfoContact>
@@ -145,7 +157,7 @@ const LateralBar = ({ id }) => {
               width={35}
               viewBox="0 0 35 35"
               heigh={35}
-              color="#ECEFF4"
+              color={themeColor}
             />
             <ProfileInfoContatText>
               <ProfileLink href={profile.blog} target="_blank">
@@ -163,7 +175,7 @@ const LateralBar = ({ id }) => {
               width={35}
               viewBox="0 0 35 35"
               heigh={35}
-              color="#ECEFF4"
+              color={themeColor}
             />
             <ProfileInfoContatText>
               <ProfileLink

@@ -188,10 +188,8 @@ const LateralBar = ({ id, preferenceTheme, TougleTheme }) => {
           </ProfileInfoContact>
         ) : null}
       </ProfileInfoContatsContainer>
-      <ProfileBackButton>
-        <ProfileBackButtonText onClick={() => history.push({ pathname: "/" })}>
-          Voltar
-        </ProfileBackButtonText>
+      <ProfileBackButton onClick={() => history.push({ pathname: "/" })}>
+        <ProfileBackButtonText>Voltar</ProfileBackButtonText>
       </ProfileBackButton>
     </ProfileInfoContainer>
   );

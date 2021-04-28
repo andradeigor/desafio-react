@@ -11,7 +11,7 @@ const getInicialData = (rawdata) => {
       updated: null,
     };
     const time1 = new Date().getTime();
-    const time2 = new Date(dat.updated_at).getTime();
+    const time2 = new Date(dat.pushed_at).getTime();
     const day = 1000 * 60 * 60 * 24;
     temp.updated = Math.floor((time1 - time2) / day);
     newdata.push(temp);

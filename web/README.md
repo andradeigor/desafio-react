@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Desafio ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![demonstration](https://media.giphy.com/media/pCwi86SNzeihFHcxiO/giphy.gif)
 
-## Available Scripts
+## Tabela de conteúdos
 
-In the project directory, you can run:
+<!--ts-->
 
-### `yarn start`
+- [Sobre](#sobre)
+- [Pré-requisitos](#pré-requisitos)
+- [Como usar](#como-usar)
+- [Responvisidade](#responsividade)
+- [Conferencia de Perfil](#conferencia-de-perfil)
+- [Buildando para deploy](#buildando-para-deploy)
+- [Tecnologias](#tecnologias)
+<!--te-->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Sobre
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Este projeto Tem como objetivo a realização do desafo proposto pelo DevMozao em seu GitHub.
 
-### `yarn test`
+## Pré-requisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para realizar o teste do projeto, é preciso ter as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js 14.16.1](https://nodejs.org/en/), [Reac.js](https://reactjs.org/).
+Bem como um editor de texto como o [VSCode](https://code.visualstudio.com/)
 
-### `yarn build`
+## Como Usar:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Rodando a Página em Desenvolvimento
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone este repositório
+$ git clone <https://github.com/andradeigor/desafio-reactjs>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Acesse a pasta do projeto no terminal/cmd
+$ cd web
 
-### `yarn eject`
+# Instale as dependências
+$ npm install/yarn install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Starte a página react
+$ npm start/yarn start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# A página irá carregar, você poderá procurar por perfils no github e alterar os temas para light/dark.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Responsividade
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Esta página foi desenvolvida para ser responvida em perfils maiores que 1300px, Ipads e Iphones 5.
 
-## Learn More
+![demonstration](https://media.giphy.com/media/7G9Wx640J0oGPc7vXn/giphy.gif)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Conferencia de Perfil
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Esta página confere se o perfil digitado tem mais de 2 Caracteres(minimo exigido pelo github) e mostra um modal de erro caso o perfil não existe
 
-### Code Splitting
+![demonstration](https://media.giphy.com/media/nS9vbKGuG4vXbsYP7Y/giphy.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Buildando para deploy
 
-### Analyzing the Bundle Size
+```bash
+# Clone este repositório
+$ git clone <https://github.com/andradeigor/desafio-reactjs>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Acesse a pasta do projeto no terminal/cmd
+$ cd web
 
-### Making a Progressive Web App
+# Instale as dependências
+$ npm install/yarn install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Build a página react
+$ npm run build/yarn build
 
-### Advanced Configuration
+# Após o processo de compilação, você poderá ter acesso aos arquivos dentro da página build/.
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Tecnologias
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- NodeJS
+- ReactJS
+- Axios
+- Styled-Component
+- React Router Dom

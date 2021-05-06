@@ -16,6 +16,7 @@ const getInicialData = (rawdata) => {
     temp.updated = Math.floor((time1 - time2) / day);
     newdata.push(temp);
   });
+
   newdata.sort((a, b) => {
     return b.stars - a.stars;
   });

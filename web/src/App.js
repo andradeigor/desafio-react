@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 function App() {
   const [preferenceTheme, SetPreferenceTheme] = MySetState("theme", light);
   const TougleTheme = () => {
+    console.log("mudei");
     preferenceTheme === light
       ? SetPreferenceTheme(dark)
       : SetPreferenceTheme(light);

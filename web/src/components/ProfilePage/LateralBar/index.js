@@ -25,7 +25,7 @@ import request from "../../../utils/request";
 import { useHistory } from "react-router-dom";
 import MoonIconPath from "../../../assets/MoonIcon2.svg";
 import SunIconPath from "../../../assets/SunIcon2.svg";
-const LateralBar = ({ id, preferenceTheme, TougleTheme }) => {
+const LateralBar = ({ id, preferenceTheme, TougleTheme, stars }) => {
   const history = useHistory();
   const [profile, setProfile] = useState({});
   const themeColor = preferenceTheme.title === "light" ? "#ECEFF4" : "#47525E";
@@ -94,7 +94,7 @@ const LateralBar = ({ id, preferenceTheme, TougleTheme }) => {
             heigh={30}
             color={themeColor}
           />
-          <ProfileInfoStatsNumber>100</ProfileInfoStatsNumber>
+          <ProfileInfoStatsNumber>{stars}</ProfileInfoStatsNumber>
           <ProfileInfoStatsText>Stars</ProfileInfoStatsText>
         </ProfileInfoStatsItem>
       </ProfileInfoStatsContainer>
